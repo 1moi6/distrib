@@ -210,6 +210,9 @@ td,th{
 	width: 100%;
 	overflow: scroll;
 	border-collapse: collapse;
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
 }
 /*tr:nth-child(11) {background-color: #c2c2C2;}*/
 
