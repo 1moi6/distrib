@@ -284,7 +284,7 @@ profs.forEach((prval, i) => {
 });
 
 /*####### ao clicar em atribuir #########*/
-$("#atribuir").click(function(){
+function atribuirfct(){
   cnd = !($("option:selected")[0].value==="-1");
   console.log(cnd)
   if (cnd){ 
@@ -312,7 +312,7 @@ $("#atribuir").click(function(){
     criartabela(Atrib)
     tabelacompleta(Atrib)
   }
-})
+}
 
 $("input").on('change', function(){
   haha = document.getElementById("atbL");
@@ -386,7 +386,7 @@ $('body').on('change', 'input[type=checkbox]',function (e) {
       vt.push(disciplinas[PrfAtb[prfa][i]])
       horprf.push(hor[IdDis[i]])
     }*/
-$("select").on('change',function(){
+function selfct(){
   horprf = [];
   var dcpesc = disciplinas.indexOf($("option:selected")[0].innerText)
   if (!(dcpesc===undefined)){
@@ -401,7 +401,7 @@ $("select").on('change',function(){
   catch{
   }
   horario(horprf)
-  })
+  }
 
 function atbbtn(){
   btnclck = true
