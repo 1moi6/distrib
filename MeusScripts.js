@@ -193,7 +193,7 @@ function horario(dsc){
  }
   var  horuser = [];
   for(var i=0;i<dsc.length;i++){
-    x = dsc[i];
+    x = dsc[i];    
     if(x.length>0){
       let y = x.split('/');
       for(var j=0;j<y.length;j++){
@@ -321,12 +321,12 @@ $("input").on('change', function(){
     haha.parentNode.removeChild(haha);
     haha = document.getElementById("atbL");
   }
-  if (!($("input:checked")[0] ===undefined)){
+  if (!($("input:checked")[0]===undefined)){
     prfa = profs.indexOf($("input:checked")[0].value)
     vt = []; 
     horprf = [];
     var dcpesc = disciplinas.indexOf($("option:selected")[0].innerText)
-    if (!(dcpesc===undefined)){
+    if (!(dcpesc===-1)){
       horprf.push(hor[dcpesc])
     }
     for(var i=0;i<PrfAtb[prfa].length;i++){
@@ -388,7 +388,7 @@ $('body').on('change', 'input[type=checkbox]',function (e) {
 function selfct(){
   horprf = [];
   var dcpesc = disciplinas.indexOf($("option:selected")[0].innerText)
-  if (!(dcpesc===undefined)){
+  if (!(dcpesc===-1)){
     horprf.push(hor[dcpesc])
   }
   try{
