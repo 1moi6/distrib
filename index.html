@@ -22,12 +22,12 @@
         <p> Disciplinas para alocação </p>
         <div class="mlin1">
           <div class="msel">
-            <select class="mselS" id="MeuSel" style="border: 0px;">
+            <select class="mselS" id="MeuSel" style="border: 0px;" onchange="selfct()">
               <option class="mopt" value=-1 style="border: 0px;"> Selecione a disciplina para alocação </option>
             </select>
           </div>
           <div>
-            <button type="button" class="btn" id="atribuir">Atribuir ao professor</button>
+            <button type="button" class="btn" id="atribuir" onclick="atribuirfct()">Atribuir ao professor</button>
           </div>
         </div>
         <div class="mlin2" id="disatbprf">
@@ -169,3 +169,4 @@
 </body>
   <script src="MeusScripts.js" type="text/javascript"></script>
 </html>
+
