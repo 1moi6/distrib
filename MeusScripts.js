@@ -325,6 +325,10 @@ $("input").on('change', function(){
     prfa = profs.indexOf($("input:checked")[0].value)
     vt = []; 
     horprf = [];
+    var dcpesc = disciplinas.indexOf($("option:selected")[0].innerText)
+    if (!(dcpesc===undefined)){
+      horprf.push(hor[dcpesc])
+    }
     for(var i=0;i<PrfAtb[prfa].length;i++){
       vt.push(disciplinas[PrfAtb[prfa][i]])
       horprf.push(hor[IdDis[PrfAtb[prfa][i]]])
@@ -381,11 +385,6 @@ $('body').on('change', 'input[type=checkbox]',function (e) {
   tabelacompleta(Atrib)
 })
 
-/*horprf = [];
-    for(var i=0;i<PrfAtb[prfa].length;i++){
-      vt.push(disciplinas[PrfAtb[prfa][i]])
-      horprf.push(hor[IdDis[i]])
-    }*/
 function selfct(){
   horprf = [];
   var dcpesc = disciplinas.indexOf($("option:selected")[0].innerText)
